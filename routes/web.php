@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProxyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::post('/proxy',[ProxyController::class,'handle']);
+
+Route::get('/posts',[ProxyController::class,'post']);
